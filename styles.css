@@ -1,0 +1,215 @@
+div, header, nav, main {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+p {
+  margin: 0;
+}
+body{
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+  margin: 0;
+}
+.preload {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 5px;
+  background-color: #f3f3f3;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  border-bottom: 2px solid black;
+  height: 50px;
+  width: 100%;
+}
+
+.header span {
+  font-size: 24px;
+  margin-left: 5px;
+  font-family:'Libre Franklin', sans-serif;
+  font-weight: 600;
+}
+.header nav {
+  margin-right: 5px;
+  margin-bottom: 1px;
+  font-family:'Poppins', sans-serif;
+  font-size: 18px;
+  min-width: 150px;
+  display: flex;
+  justify-content: space-around;
+}
+.header nav a {
+  color: black;
+}
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family:'Libre Franklin', sans-serif;
+  font-weight: 600;
+  width: 100%;
+  height: 400px;
+  background-image: url('./public/englishmuffin.jpeg');
+  background-size: cover;
+  transition: all 2s ease;
+}
+.overlay {
+  background-image: url('./public/englishmuffin.jpeg'),  rgba(0, 0, 0, 0.5); ;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+}
+.hidden {
+  opacity: 0;
+  transition: opacity 2s ease;
+
+}
+.hero-text {
+  transition: all 2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-text h1 {
+  margin: 25px 0px 10px -4px;
+  text-align: center;
+  font-size: 72px;
+  text-shadow: 2px 1px #020202;
+}
+.hero-text a {
+  text-transform: capitalize;
+  margin-top: 15px;
+  color: white;
+  transition: all .5s ease-out;
+  font-size:18px;
+  align-self: start;
+}
+.hero-text p {
+  color: white;
+  font-size:16px;
+  width: 550px;
+  margin-top: 20px;
+}
+.hero-text a:hover {
+  color: white;
+  font-size: 24px;
+}
+
+.landing {
+  position: fixed;
+  top: 50px;
+  z-index: -2;
+  height: calc(100vh - 50px);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.first-content {
+  width: 300px;
+  font-family:'Libre Franklin', sans-serif;
+  font-weight: 600;
+  text-spacing: 1.5px;
+}
+.first-content h2 {
+  margin-top: 0;
+}
+
+
+.all-content {
+  margin-top:100vh;
+}
+.history {
+  height: calc(100vh - 50px);
+  background-color: white;
+  padding: 0px 20px 15px 30px;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: [col1-start] 1fr  [col2-start] 1fr  [col3-start] 1fr [col3-end];
+  grid-template-rows: [row1-start] 300px [row2-start] 20px [row3-start];
+  background-color: #fff;
+  color: #444;
+}
+#recipe {
+  height: 100vh;
+  background-color: white;
+}
+.a {
+grid-column: col1-start / col2-start;
+grid-row: row1-start ;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.a h3, h5 {
+  font-family: 'Poppins', sans-serif;
+}
+.a img {
+  display: inline-block;
+  width: 100%;
+  padding: 0 auto;
+}
+.a h5 {
+  margin-top: 2px;
+  align-self: flex-start;
+}
+.b {
+grid-column: col2-start / col3-end ;
+grid-row: row1-start / row2-end;
+display: flex;
+flex-direction: column;
+
+}
+.b ul {
+  list-style-image: url('./public/crumpet.png');
+  font-family: 'Poppins', sans-serif;
+}
+.b li {
+  font-size: 22px;
+}
+
+.b h2 {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 15px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-decoration: bold underline;
+}
+
+.d {
+grid-column: col1-start / col3-start;
+grid-row: row3-start;
+  background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F865284.jpg');
+  background-size: cover;
+  background-position: bottom;
+}
+.c {
+grid-column: col1-start/ col3-end ;
+grid-row: row2-start ;
+}
+
+
+
+
+
+@media only screen and (min-width: 760px) {
+  .hero-image-container {
+    min-height: 600px;
+    min-width: 350px;
+  }
+  .landing {
+    /*
+    flex-direction: row;
+    */
+  }
+}
