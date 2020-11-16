@@ -166,6 +166,7 @@ align-items: center;
 }
 .a h3, h5 {
   font-family: 'Poppins', sans-serif;
+  align-self: center;
 }
 .a h3 {
   font-size: 16px;
