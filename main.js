@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
 setTimeout(()=>{
   heroText.classList.toggle('hidden')
   heroImage.classList.toggle('overlay')
-}, 1500)
+}, 750)
 
 const heroImage = document.querySelector('.hero-image-container')
 
