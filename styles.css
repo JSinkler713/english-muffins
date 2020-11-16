@@ -3,6 +3,7 @@ div, header, nav, main {
 }
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 p {
   margin: 0;
@@ -23,8 +24,7 @@ body{
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  padding-bottom: 5px;
+  align-items: center;
   background-color: #f3f3f3;
   position: fixed;
   z-index: 10;
@@ -35,22 +35,24 @@ body{
 }
 
 .header span {
-  font-size: 24px;
-  margin-left: 5px;
+  font-size: 18px;
+  margin-left: 18px;
   font-family:'Libre Franklin', sans-serif;
   font-weight: 600;
 }
 .header nav {
-  margin-right: 5px;
+  margin-right: 18px;
   margin-bottom: 1px;
   font-family:'Poppins', sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   min-width: 150px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .header nav a {
   color: black;
+  text-decoration: none;
+  font-size: 12px;
 }
 .hero-image-container {
   display: flex;
@@ -59,8 +61,11 @@ body{
   font-family:'Libre Franklin', sans-serif;
   font-weight: 600;
   width: 100%;
-  height: 400px;
-  background-image: url('./public/englishmuffin.jpeg');
+  min-height: calc(100vh);
+  background-image: url('./public/baking.jpg');
+  /*
+   <a href="https://www.freepik.com/photos/flower">Flower photo created by wirestock - www.freepik.com</a>
+   */
   background-size: cover;
   transition: all 2s ease;
 }
@@ -79,32 +84,43 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 350px;
+  justify-content: space-between;
+  padding-top: 100px;
 }
 .hero-text h1 {
-  margin: 25px 0px 10px -4px;
+  margin: 0;
   text-align: center;
   font-size: 72px;
   text-shadow: 2px 1px #020202;
 }
 .hero-text a {
-  text-transform: capitalize;
-  margin-top: 15px;
-  color: white;
+  margin-top: 18px;
+  color: #FE3333;
+  font-weight:500;
   transition: all .5s ease-out;
-  font-size:18px;
+  font-size:20px;
   align-self: start;
+  text-decoration: none;
+}
+.hero-text .recipe-button {
+  margin-top: 18px;
+  border-radius: 90px;
+  background-color: white;
+  align-self: flex-start;
+  border: 0px;
+  width: 150px;
+  height: 50px;
+}
+
+.hero-text .recipe-button:hover {
+  border:2px solid #FE3333;
 }
 .hero-text p {
   color: white;
   font-size:16px;
   width: 550px;
-  margin-top: 20px;
 }
-.hero-text a:hover {
-  color: white;
-  font-size: 24px;
-}
-
 .landing {
   position: fixed;
   top: 50px;
@@ -128,21 +144,18 @@ body{
 
 .all-content {
   margin-top:100vh;
+  background: white;
 }
 .history {
-  height: calc(100vh - 50px);
   background-color: white;
-  padding: 0px 20px 15px 30px;
+  padding: 0 19px;
   display: grid;
   grid-gap: 15px;
   grid-template-columns: [col1-start] 1fr  [col2-start] 1fr  [col3-start] 1fr [col3-end];
-  grid-template-rows: [row1-start] 300px [row2-start] 20px [row3-start];
+  grid-template-rows: [row1-start] 250px [row2-start] 10px;
   background-color: #fff;
   color: #444;
-}
-#recipe {
-  height: 100vh;
-  background-color: white;
+  border-bottom: 1px solid black;
 }
 .a {
 grid-column: col1-start / col2-start;
@@ -154,6 +167,9 @@ align-items: center;
 .a h3, h5 {
   font-family: 'Poppins', sans-serif;
 }
+.a h3 {
+  font-size: 16px;
+}
 .a img {
   display: inline-block;
   width: 100%;
@@ -162,6 +178,7 @@ align-items: center;
 .a h5 {
   margin-top: 2px;
   align-self: flex-start;
+  font-size: 12px;
 }
 .b {
 grid-column: col2-start / col3-end ;
@@ -171,7 +188,6 @@ flex-direction: column;
 
 }
 .b ul {
-  list-style-image: url('./public/crumpet.png');
   font-family: 'Poppins', sans-serif;
 }
 .b li {
@@ -179,6 +195,8 @@ flex-direction: column;
 }
 
 .b h2 {
+  font-size: 24px;
+  align-self: center;
   font-family: 'Poppins', sans-serif;
   margin-top: 15px;
   margin-bottom: 12px;
@@ -189,17 +207,75 @@ flex-direction: column;
 .d {
 grid-column: col1-start / col3-start;
 grid-row: row3-start;
-  background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F865284.jpg');
-  background-size: cover;
-  background-position: bottom;
 }
 .c {
 grid-column: col1-start/ col3-end ;
 grid-row: row2-start ;
 }
 
+#recipe {
+  height: calc(100vh - 50px);
+  background-color: white;
+  padding: 19px;
+  display: grid;
+  grid-gap: 19px;
+  grid-template-columns: [col1-start] 1fr  [col2-start] 1fr  [col3-start] 1fr [col3-end];
+  grid-template-rows: [row1-start] 30px [row2-start] auto;
+  background-color: #fff;
+  color: #444;
+}
+.title {
+  grid-column: col1-start/ col3-end ;
+  grid-row: row1-start ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Libre Franklin', sans-serif;
+  font-size: 32px;
+  color: black;
+  font-weight: 600;
+}
+.ingredients-side {
+  grid-column: col1-start/ col2-start ;
+  grid-row: row2-start ;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 0;
+  height: 250px;
+  border:1px solid #eadfdf;
+  border-radius: 8px;
+  box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.2);
+}
+.ingredients-side h3 {
+  margin: 10px 25px 0px 25px;
+  color: black;
+  text-decoration: underline;
+}
+.ingredients-side ul {
+  margin-top: 5px;
+  color: black;
+}
+.instructions-main {
+  padding: 0px 20px;
+  font-family: 'Poppins', sans-serif;
+  grid-column: col2-start/ col3-end ;
+  grid-row: row2-start ;
+  border:1px solid #eadfdf;
+  border-radius: 8px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
+  border:1px solid #eadfdf;
+}
+.instructions-main h3 {
+  text-decoration: underline;
+  color: black;
+  margin: 10px 0px 0px 0px;
+}
+.instructions-main ul {
+  color: black;
+  margin-top: 5px;
+}
 
 
+/* currently ok down to 900 px */
 
 
 @media only screen and (min-width: 760px) {
