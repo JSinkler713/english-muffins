@@ -179,7 +179,6 @@ align-items: center;
 }
 .a h5 {
   margin-top: 2px;
-  align-self: flex-start;
   font-size: 12px;
 }
 .b {
