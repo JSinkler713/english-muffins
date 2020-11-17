@@ -276,6 +276,8 @@ grid-row: row2-start ;
 }
 .more-info {
   padding: 19px;
+  letter-spacing: 1.5px;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* currently ok down to 900 px */
