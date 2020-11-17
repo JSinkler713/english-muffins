@@ -274,7 +274,9 @@ grid-row: row2-start ;
   color: black;
   margin-top: 5px;
 }
-
+.more-info {
+  padding: 19px;
+}
 
 /* currently ok down to 900 px */
 
